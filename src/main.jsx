@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import App from './App';
 import Products from './components/Products';
+import AddUsers from './components/AddUsers';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
     loader: () => fetch('http://localhost:5000/products'),
     element: <Products></Products>
   },
+  {
+    path: '/users',
+    // loader: () => fetch('http://localhost:5000/users'),
+    element: <AddUsers></AddUsers>
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(
